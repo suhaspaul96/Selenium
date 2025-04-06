@@ -3,11 +3,11 @@ package com.suhaspoul.ex02_Selenium_basics;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
-public class TestSelenium02 {
+public class TestSelenium03 {
 
     @Test
     public static void main(String[] args) {
-        TestSelenium02 seleniumTest = new TestSelenium02();
+        TestSelenium03 seleniumTest = new TestSelenium03();
         seleniumTest.verify_submit();
     }
 

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class TestSelenium03 {
+public class TestSelenium02 {
 
     WebDriver driver;
 
@@ -16,7 +16,7 @@ public class TestSelenium03 {
         driver.get("https://practicetestautomation.com/practice-test-login/");
         System.out.println(driver.getTitle());
         driver.manage().window().maximize();
-        //driver.quit();
+         driver.quit();
 
 
     }
