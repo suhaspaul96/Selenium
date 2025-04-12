@@ -13,7 +13,7 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.function.Function;
 
-public class TestSelenium_ImplicitWait {
+public class TestSelenium_15_FluentWait {
 
     @Description("Verifying implicit wait by example")
     @Test
