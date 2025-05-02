@@ -16,7 +16,7 @@ public class TestSelenium02 {
         driver.get("https://practicetestautomation.com/practice-test-login/");
         System.out.println(driver.getTitle());
         driver.manage().window().maximize();
-         driver.quit();
+         //driver.quit();
 
 
     }
@@ -33,6 +33,7 @@ public class TestSelenium02 {
     @Test(priority = 3)
     public void verify_logout(){
         driver.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+        driver.quit();
     }
 
 }

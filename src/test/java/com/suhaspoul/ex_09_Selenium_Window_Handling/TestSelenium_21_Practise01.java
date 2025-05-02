@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 
 import java.util.Set;
 
-public class TestSelenium_21 {
+public class TestSelenium_21_Practise01 {
 
     WebDriver driver;
+
     @Test
-    public void test_fileupload_p5() throws InterruptedException {
+    public void test_windowHandle() throws InterruptedException {
 
         driver = new ChromeDriver();
         String URL = "https://the-internet.herokuapp.com/windows";
@@ -24,21 +25,17 @@ public class TestSelenium_21 {
         driver.findElement(By.linkText("Click Here")).click();
 
         Set<String> windowHandles = driver.getWindowHandles();
-        System.out.println("Window Handles: " + windowHandles); // [974535CFD9B87DA0B44B44CC2FFC0591, 8E6F9A52E8382019CBB64FB9E6F024EC]
+        for (String window : windowHandles) {
 
-
-        for (String handle: windowHandles){
-            driver.switchTo().window(handle);
-            if(driver.getPageSource().contains("New Window")){
-                System.out.println("Test Case Passed!");
+            driver.switchTo().window(window);
+            if (driver.getCurrentUrl().equals("https://the-internet.herokuapp.com/windows/new1")) {
+                System.out.println("Link matched");
+            } else {
+                System.out.println("Link is not matching");
             }
 
-            Thread.sleep(2000);
-            driver.switchTo().window(parent);
-
-
         }
-        //driver.quit();
+
     }
 
 }
